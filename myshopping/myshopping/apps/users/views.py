@@ -9,3 +9,12 @@ class Register_View(View):
         '''提供用户注册页面'''
         return render(request, 'register.html')
 
+    def post(self,request):
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        password2 = request.POST.get('password2')
+        mobile = request.POST.get('mobile')
+        allow = request.POST.get('allow')
+
+        if not all(username,password,password2,mobile,allow)
+
