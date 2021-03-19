@@ -16,5 +16,6 @@ class Register_View(View):
         mobile = request.POST.get('mobile')
         allow = request.POST.get('allow')
 
-        if not all(username,password,password2,mobile,allow)
-
+        sql = '''
+        INSERT INTO user('username','password','password2','mobile','allow')VALUES (%s,%s,%s,%s,%s,%s)
+        '''
