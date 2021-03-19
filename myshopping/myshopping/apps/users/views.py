@@ -19,3 +19,4 @@ class Register_View(View):
         sql = '''
         INSERT INTO user('username','password','password2','mobile','allow')VALUES (%s,%s,%s,%s,%s,%s)
         '''
+

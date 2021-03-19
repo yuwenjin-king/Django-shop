@@ -1,3 +1,5 @@
+import re
+
 from django.shortcuts import render
 
 # Create your views here.
@@ -13,4 +15,11 @@ class regiscode(View):
         pass
     def post(self,request):
         pass
+
+    def authenticate(self, request, username=None,password=None,**kwargs):
+        #使用账号查询用户
+        if re.match(r'^1[3-9]\d(9)$',username):
+            user = User.objects.get(mobile=username)
+        else:
+            user = User
 
